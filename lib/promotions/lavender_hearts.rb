@@ -5,7 +5,7 @@ module Promotions
 
     private
 
-    def condition_is_met?(basket)
+    def threshold_is_met?(basket)
       basket.count { |item| item_is_lavender_heart?(item) } >= DISCOUNT_THRESHOLD
     end
 

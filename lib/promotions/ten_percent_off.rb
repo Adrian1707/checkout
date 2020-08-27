@@ -5,7 +5,7 @@ module Promotions
 
     private
 
-    def condition_is_met?(basket)
+    def threshold_is_met?(basket)
       basket_total = basket.reduce(0) { |sum, item| sum + item.price }
       basket_total > DISCOUNT_THRESHOLD
     end
